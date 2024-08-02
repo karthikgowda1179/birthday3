@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Darumadrop One', 'sans-serif';
+    color: #FFFFFF;
+}
+
+#bg-video {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#gato1 {
+    display: none;
+    transform: rotateY(180deg);
+    margin-left: 70px;
+}
+
+h1 {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 3.25rem;
+}
+
+.letter {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.gato-box {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.textbox {
+    margin-left: 7%;
+    width: 85%;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    height: 90px;
+    width: 100%;
+    background-color: #131516;
+}
+.player p {
+    font-family: 'Lato', 'sans-serif';
+}
+
+#album-cover {
+    margin-left: 25px;
+    margin-right: 35px;
+    max-height: 60px;
+    border-radius: 50%;
+    box-shadow: 1px 1px black;
+
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#album-cover {
+    animation-name: spin;
+    animation-timing-function: linear;
+}
+@keyframes spin {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
+#song-title {
+    padding-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+#artist {
+    display: none;
+}
+
+audio {
+    width: 100px;
+    margin-left: 40px;
+    background-color: #131516;
+}
+
+@media screen and (min-width: 1000px) {
+
+    h1 {
+        margin-top: 125px;
+    }
+
+    .textbox {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .letter {
+        font-size: 1.5rem;
+    }
+
+    #gato1 {
+        display: initial;
+    }
+    #gato2 {
+        margin-right: 70px;
+    }
+
+    .gato-box {
+        justify-content: space-between;
+    }
+
+    audio {
+        width: 500px;
+        margin-left: 150px;
+    }
+
+    #song-title {
+        padding-bottom: 5px;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    #artist {
+        display: initial;
+    }
+}
